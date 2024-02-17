@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Layout</title>
+    <style>
+        @media screen and (min-width:425px) and (max-width:767px) {
+        .p{
+            display: grid;
+            padding: 10px;
+            gap: 5px;
+            height: 1050px;
+            width: 700px;
+        }
+        .c{
+            border: 3px solid red;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+        }
+        .head,.side,.ads,.foot,.nav{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        .main{
+            grid-row-start: 3;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-end: 5;
+        }
+        
+       }
+       @media screen and (min-width:768px) and (max-width:1023px) {
+        .p {
+            display: grid;
+            padding: 10px;
+            gap: 5px;
+            height: 750px;
+            width: 920px;
+        }
+        .c{
+            border: 3px solid red;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+        }
+        .head,.nav{
+            grid-column-start: 1;
+            grid-column-end: 8;
+           
+        }
+       .side{
+            grid-row-start: 3;
+            grid-row-end: 8;
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
+        
+        .main{
+            grid-row-start: 3;
+            grid-row-end: 8;
+            grid-column-start: 2;
+            grid-column-end: 8;
+        }
+        .foot{
+            grid-column-start: 2;
+            grid-column-end: 8;
+        }
+        
+       }
+
+       @media screen and (min-width:1024px) {
+        .p{
+        display: grid;
+        padding: 10px;
+        gap: 10px;
+        height: 600px;
+        width: 980px;
+    }    
+    .c{
+        border: 3px solid red;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+    }   
+    .head,.foot{
+        grid-column: 1/8;
+    }
+    .side,.ads{
+        grid-row: 2/7;
+    }
+    .nav{
+        grid-column: 2/7;
+        grid-row: 2;
+    }
+    .main{
+        grid-row: 3/7;
+        grid-column: 2/7;
+    }
+        
+       }
+    </style>
+</head>
+
+<body>
+    <div class="p">
+        <div class="c head">Header</div>
+        <div class="c nav">Navigation</div>
+        <div class="c main">Main</div>
+        <div class="c side">Sidebar</div>
+        <div class="c ads">Ads</div>
+        <div class="c foot">Footer</div>
+    </div>
+</body>
+
+</html>
